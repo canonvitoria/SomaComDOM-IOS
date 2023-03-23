@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma / DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CALCULE AQUI A SUMA NOTA</h1>
+
+        <SPAN>Primeiro trimestre</SPAN>
+        <input type="number" name="valor1" id="valor1"> + <br> 
+
+        <span>Segundo trimestre</span>
+        <input type="number" name="valor2" id="valor2"> + <br>
+        
+        <span>Terceiro trimestre</span>
+        <input type="number" name="valor3" id="valor3"> + <br>
+
+        <span>Quarto trimestre</span>
+        <input type="number" name="valor4" id="valor4">
+
+        <input type="button" value="Somar" onclick="somar()" id="buttonSomar">
+    
+        <DIV class="resp"></DIV>
+    </div>
+    
+<!-- Java Script -->
+
+    <script>
+        function somar() {
+            var v1 = document.querySelector ('#valor1');
+            var v2 = document.querySelector ('#valor2');
+            var v3 = document.querySelector ('#valor3');
+            var v4 = document.querySelector ('#valor4');
+
+            var resp = document.querySelector ('.resp');
+
+            var n1 = Number(v1.value);
+            var n2 = Number(v2.value);
+            var n3 = Number(v2.value);
+            var n4 = Number(v2.value);
+
+            var resultado = n1 + n2 + n3 + n4
+
+            var total = resultado / 4
+
+            resp.innerHTML = `Voce tirou ${total} no ano. Entre em contato com a direção para informar sua nota!`;
+        }
+    </script>
+</body>
+</html>
